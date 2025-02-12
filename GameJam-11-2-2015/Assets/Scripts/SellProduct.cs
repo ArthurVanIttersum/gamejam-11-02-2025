@@ -48,22 +48,22 @@ public class SellProduct : MonoBehaviour
     {
         if (butter != null)
         {
-            if (bulkSlider.value == 1 && butter.GetValue() <= 1)
+            if (bulkSlider.value == 1 && butter.GetValue() >= 1)
             {
                 coins.ChangeValueBy(1 * butterSellValue);
                 butter.ChangeValueBy(-1);
             }
-            else if (bulkSlider.value == 2 && butter.GetValue() <= 5)
+            else if (bulkSlider.value == 2 && butter.GetValue() >= 5)
             {
                 coins.ChangeValueBy(5 * butterSellValue);
                 butter.ChangeValueBy(-5);
             }
-            else if (bulkSlider.value == 3 && butter.GetValue() <= 10)
+            else if (bulkSlider.value == 3 && butter.GetValue() >= 10)
             {
                 coins.ChangeValueBy(10 * butterSellValue);
                 butter.ChangeValueBy(-10);
             }
-            else if (bulkSlider.value == 4 && butter.GetValue() <= 100)
+            else if (bulkSlider.value == 4 && butter.GetValue() >= 100)
             {
                 coins.ChangeValueBy(100 * butterSellValue);
                 butter.ChangeValueBy(-100);
@@ -78,22 +78,22 @@ public class SellProduct : MonoBehaviour
     {
         if (cheese != null)
         {
-            if (bulkSlider.value == 1 && cheese.GetValue() <= 1)
+            if (bulkSlider.value == 1 && cheese.GetValue() >= 1)
             {
                 coins.ChangeValueBy(1 * cheeseSellValue);
                 cheese.ChangeValueBy(-1);
             }
-            else if (bulkSlider.value == 2 && cheese.GetValue() <= 5)
+            else if (bulkSlider.value == 2 && cheese.GetValue() >= 5)
             {
                 coins.ChangeValueBy(5 * cheeseSellValue);
                 cheese.ChangeValueBy(-5);
             }
-            else if (bulkSlider.value == 3 && cheese.GetValue() <= 10)
+            else if (bulkSlider.value == 3 && cheese.GetValue() >= 10)
             {
                 coins.ChangeValueBy(10 * cheeseSellValue);
                 cheese.ChangeValueBy(-10);
             }
-            else if (bulkSlider.value == 4 && cheese.GetValue() <= 100)
+            else if (bulkSlider.value == 4 && cheese.GetValue() >= 100)
             {
                 coins.ChangeValueBy(100 * cheeseSellValue);
                 cheese.ChangeValueBy(-100);
@@ -108,26 +108,27 @@ public class SellProduct : MonoBehaviour
     {
         if (cake != null)
         {
-            if (bulkSlider.value == 1 && cake.GetValue() <= 1)
+            if (bulkSlider.value == 1 && cake.GetValue() >= 1)
             {
                 coins.ChangeValueBy(1 * cakeSellValue);
                 cake.ChangeValueBy(-1);
             }
-            else if (bulkSlider.value == 2 && cake.GetValue() <= 5)
+            else if (bulkSlider.value == 2 && cake.GetValue() >= 5)
             {
                 coins.ChangeValueBy(5 * cakeSellValue);
                 cake.ChangeValueBy(-5);
             }
-            else if (bulkSlider.value == 3 && cake.GetValue() <= 10)
+            else if (bulkSlider.value == 3 && cake.GetValue() >= 10)
             {
                 coins.ChangeValueBy(10 * cakeSellValue);
                 cake.ChangeValueBy(-10);
             }
-            else if (bulkSlider.value == 4 && cake.GetValue() <= 100)
+            else if (bulkSlider.value == 4 && cake.GetValue() >= 100)
             {
                 coins.ChangeValueBy(100 * cakeSellValue);
                 cake.ChangeValueBy(-100);
-            } else if (bulkSlider.value == 5)
+            } 
+            else if (bulkSlider.value == 5 && cake.GetValue() >= 1000)
             {
                 coins.ChangeValueBy(cake.GetValue() * cakeSellValue);
                 cake.ChangeValueTo(0);

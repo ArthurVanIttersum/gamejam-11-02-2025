@@ -12,7 +12,11 @@ public class LevelUp : MonoBehaviour
     private GameObject currentHouse;
     public Vector3 housePosition;
     public TextMeshProUGUI housePriceText;
-    
+
+    public GameObject[] butterRelatedUI;
+    public GameObject[] cheeseRelatedUI;
+    public GameObject[] cakeRelatedUI;
+
     void Start()
     {
         SwitchModel();
@@ -36,6 +40,7 @@ public class LevelUp : MonoBehaviour
             {
                 currentLevel++;
                 SwitchModel();
+                EnableObjects();
                 generator.InitiatePasiveIncome(currentLevel);
             }
         }
@@ -49,5 +54,31 @@ public class LevelUp : MonoBehaviour
         }
         currentHouse = Instantiate(houses[currentLevel], housePosition, Quaternion.identity, transform);
         
+    }
+
+    public void EnableObjects()
+    {
+        if (currentLevel == 1)
+        {
+            for (int i = 0; i < butterRelatedUI.Length; i++)
+            {
+                butterRelatedUI[i].SetActive(true);
+            }
+        }
+        else if (currentLevel == 2)
+        {
+            for (int i = 0; i < cheeseRelatedUI.Length; i++)
+            {
+                cheeseRelatedUI[i].SetActive(true);
+            }
+        }
+        else if (currentLevel == 3)
+        {
+            for (int i = 0; i < cakeRelatedUI.Length; i++)
+            {
+                cakeRelatedUI[i].SetActive(true);
+            }
+        }
+
     }
 }

@@ -10,7 +10,7 @@ public class ResourceGeneration : MonoBehaviour
     private IEnumerator coroutine;
     public IntVariable []productVariables;
     public float[] delays = {1,2,5,10};//product generation speed should be diffined here!
-    public float[] PassiveIncomeUpgrades = {0,0,0,0 };
+    private float[] PassiveIncomeUpgrades = {0,0,0,0 };
     private double exponentIncrease = 1.4;
     public double[] prices = { 1, 50, 100, 1000 };
     public IntVariable coinAmount;
@@ -43,7 +43,7 @@ public class ResourceGeneration : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(delay * (float)Math.Pow(0.9f, PassiveIncomeUpgrades[productIndex]));
+            yield return new WaitForSeconds(delay * (float)Math.Pow(0.85f, PassiveIncomeUpgrades[productIndex]));
             variable.ChangeValueBy(1);
         }
     }

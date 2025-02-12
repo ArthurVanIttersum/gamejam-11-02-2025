@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class CameraRotate : MonoBehaviour
 {
+    public float rotationspeed;
     void Update()
     {
-        //Do this later when all prefabs are added.
+        transform.Rotate(0, Time.deltaTime * rotationspeed, 0);
+        
     }
 }
