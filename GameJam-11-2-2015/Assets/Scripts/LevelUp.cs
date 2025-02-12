@@ -24,7 +24,7 @@ public class LevelUp : MonoBehaviour
 
     public void GoLevelUp()
     {
-        if (money.GetValue() > costLevelUp[currentLevel])
+        if (money.GetValue() >= costLevelUp[currentLevel])
         {
             money.ChangeValueBy(-costLevelUp[currentLevel]);
             if (currentLevel == 3)
