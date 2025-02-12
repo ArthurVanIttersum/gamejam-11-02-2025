@@ -10,9 +10,7 @@ public class LevelUp : MonoBehaviour
     public GameObject []houses;
     private GameObject currentHouse;
     public Vector3 housePosition;
-    public GameObject []goldPots;
-    private GameObject currentGoldPot;
-    public Vector3 goldPotPosition;
+    
     
     void Start()
     {
@@ -45,10 +43,6 @@ public class LevelUp : MonoBehaviour
             Destroy(currentHouse);
         }
         currentHouse = Instantiate(houses[currentLevel], housePosition, Quaternion.identity, transform);
-        if (currentGoldPot != null)
-        {
-            Destroy(currentGoldPot);
-        }
-        currentHouse = Instantiate(goldPots[currentLevel], goldPotPosition, Quaternion.identity, transform);
+        
     }
 }
