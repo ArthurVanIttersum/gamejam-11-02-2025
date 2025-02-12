@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityFundamentals;
 
 public class LevelUp : MonoBehaviour
@@ -34,7 +35,7 @@ public class LevelUp : MonoBehaviour
             if (currentLevel == 3)
             {
                 print("you won the game!!!");
-                //move to win scene
+                SceneManager.LoadScene(1);
             }
             else
             {
