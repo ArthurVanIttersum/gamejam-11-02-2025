@@ -1393,7 +1393,6 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  exponentIncrease: 1.4
   prices:
   - 1
   - 10
@@ -2679,7 +2678,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -3565,81 +3564,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220207950}
-  m_CullTransparentMesh: 1
---- !u!1 &1233248553
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1233248554}
-  - component: {fileID: 1233248556}
-  - component: {fileID: 1233248555}
-  m_Layer: 5
-  m_Name: House
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1233248554
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233248553}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2059135650}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359, y: -14}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1233248555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233248553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9245283, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1233248556
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233248553}
   m_CullTransparentMesh: 1
 --- !u!1 &1253871372
 GameObject:
@@ -5422,7 +5346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 389, y: -128}
+  m_AnchoredPosition: {x: 386, y: -128}
   m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1767706943
@@ -5875,6 +5799,7 @@ GameObject:
   - component: {fileID: 1893379940}
   - component: {fileID: 1893379939}
   - component: {fileID: 1893379938}
+  - component: {fileID: 1893379941}
   m_Layer: 5
   m_Name: LevelUp
   m_TagString: Untagged
@@ -5899,7 +5824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380, y: -146}
+  m_AnchoredPosition: {x: -360, y: -146}
   m_SizeDelta: {x: 180, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893379938
@@ -5984,6 +5909,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893379936}
   m_CullTransparentMesh: 1
+--- !u!114 &1893379941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893379936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4541f93c31481e4db5fc85f3a4689f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 0
+  costLevelUp: 000000000000000000000000
+  money: {fileID: 11400000, guid: 96f519eada17d5b48b7cea4a431b247e, type: 2}
+  generator: {fileID: 580132074}
+  houses:
+  - {fileID: 5799002475215949262, guid: 6e3a61f141c521a409acf6fdad8ba016, type: 3}
+  - {fileID: 8529527883048213256, guid: a10dffb4fb691d24dbfbf9ac6b5dc2ab, type: 3}
+  - {fileID: 1735078465729292901, guid: 8f54f51d976c7da4092e995defaa7cb3, type: 3}
+  - {fileID: 3733424636792676274, guid: f7cf3e77aeb55bf41868312f2d9fd4d1, type: 3}
+  housePosition: {x: -7.5, y: 0, z: 0}
+  goldPots:
+  - {fileID: 5799002475215949262, guid: 164375982565f1749b44f1dde162b475, type: 3}
+  - {fileID: 8529527883048213256, guid: 79c676bb7fcc3fb4b9b4352435f2818f, type: 3}
+  - {fileID: 1735078465729292901, guid: a116e694a4bfb1b429e3088271467efc, type: 3}
+  - {fileID: 3733424636792676274, guid: d2516e6bc1817654f8307d3b512f8b6e, type: 3}
+  goldPotPosition: {x: -2.75, y: 0, z: 0}
 --- !u!1 &1927318483
 GameObject:
   m_ObjectHideFlags: 0
@@ -6302,7 +6255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -263, y: -14}
+  m_AnchoredPosition: {x: -256, y: -14}
   m_SizeDelta: {x: 10, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006207859
@@ -6378,7 +6331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -379, y: -186}
+  m_AnchoredPosition: {x: -360, y: -186}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009856736
@@ -6455,7 +6408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 391, y: -59}
+  m_AnchoredPosition: {x: 386, y: -59}
   m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022450455
@@ -6600,12 +6553,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.4
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6653,7 +6606,6 @@ RectTransform:
   - {fileID: 249778660}
   - {fileID: 580132073}
   - {fileID: 1893379937}
-  - {fileID: 1233248554}
   - {fileID: 2006207858}
   - {fileID: 1671377676}
   - {fileID: 1769558931}
