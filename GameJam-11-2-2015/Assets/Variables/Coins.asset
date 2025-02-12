@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Coins
   m_EditorClassIdentifier: 
   value: 0
-  editValue: 0
+  editValue: 100000000
