@@ -19,31 +19,31 @@ public class GoldDisplay : MonoBehaviour
     public void TryUpdateGoldDisplay()
     {
         int newValue = 0;
-        if (money.GetValue() > thresholds[0])
+        if (money.GetValue() >= thresholds[0])
         {
             newValue = 1;
         }
-        if (money.GetValue() > thresholds[1])
+        if (money.GetValue() >= thresholds[1])
         {
             newValue = 2;
         }
-        if (money.GetValue() > thresholds[2])
+        if (money.GetValue() >= thresholds[2])
         {
             newValue = 3;
         }
-        if (money.GetValue() > thresholds[3])
+        if (money.GetValue() >= thresholds[3])
         {
             newValue = 4;
         }
-        if (money.GetValue() > thresholds[4])
+        if (money.GetValue() >= thresholds[4])
         {
             newValue = 5;
         }
-        if (money.GetValue() > thresholds[5])
+        if (money.GetValue() >= thresholds[5])
         {
             newValue = 6;
         }
-        if (money.GetValue() > thresholds[6])
+        if (money.GetValue() >= thresholds[6])
         {
             newValue = 7;
         }
