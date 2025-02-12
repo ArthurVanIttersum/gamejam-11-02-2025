@@ -47,7 +47,6 @@ public class GoldDisplay : MonoBehaviour
         {
             newValue = 7;
         }
-        
         if (currentValue != newValue)
         {
             SwitchModel(newValue);
