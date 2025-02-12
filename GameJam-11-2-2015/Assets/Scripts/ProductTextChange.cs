@@ -11,7 +11,6 @@ public class ProductTextChange : MonoBehaviour
     public void Update()
     {
         productText.text = product.name + ": " + product.GetValue();
-        productText.text = "Coins: " + product.GetValue();
         unityEvent.Invoke();
     }
 }
