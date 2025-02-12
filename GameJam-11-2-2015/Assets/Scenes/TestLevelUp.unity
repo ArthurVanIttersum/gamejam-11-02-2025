@@ -265,6 +265,12 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  prices:
+  - 1
+  - 50
+  - 100
+  - 1000
+  coinAmount: {fileID: 0}
 --- !u!1 &118289728
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,12 +635,6 @@ MonoBehaviour:
   - {fileID: 1735078465729292901, guid: 8f54f51d976c7da4092e995defaa7cb3, type: 3}
   - {fileID: 3733424636792676274, guid: f7cf3e77aeb55bf41868312f2d9fd4d1, type: 3}
   housePosition: {x: -7.5, y: 0, z: 0}
-  goldPots:
-  - {fileID: 5799002475215949262, guid: 164375982565f1749b44f1dde162b475, type: 3}
-  - {fileID: 8529527883048213256, guid: 79c676bb7fcc3fb4b9b4352435f2818f, type: 3}
-  - {fileID: 1735078465729292901, guid: a116e694a4bfb1b429e3088271467efc, type: 3}
-  - {fileID: 3733424636792676274, guid: d2516e6bc1817654f8307d3b512f8b6e, type: 3}
-  goldPotPosition: {x: -2.75, y: 0, z: 0}
 --- !u!1 &215331902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1397,7 @@ GameObject:
   - component: {fileID: 397163617}
   - component: {fileID: 397163619}
   - component: {fileID: 397163618}
+  - component: {fileID: 397163620}
   m_Layer: 5
   m_Name: Coins
   m_TagString: Untagged
@@ -1462,6 +1463,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397163616}
   m_CullTransparentMesh: 1
+--- !u!114 &397163620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397163616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6751de2a331213c4699a6f8508634c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: {fileID: 11400000, guid: 96f519eada17d5b48b7cea4a431b247e, type: 2}
+  goldPots:
+  - {fileID: 405218348734160186, guid: ded38e568a91a6d47b436d3f7d168d43, type: 3}
+  - {fileID: 1494391420723434230, guid: e17c805daf825854b9496d741df1b4de, type: 3}
+  - {fileID: 7364485295981289951, guid: fddbe7e62b03348478473e524283c2ff, type: 3}
+  - {fileID: 3961095969762081541, guid: 447d8a41c8359c94c9c246cba2fa2dab, type: 3}
+  - {fileID: 8923186506462315077, guid: 8299ac310b1f9844e83afa17e5f50ea5, type: 3}
+  - {fileID: 8146632699424182368, guid: 19c7c512e1d50504ba8d5de81ee48813, type: 3}
+  - {fileID: 7827874709003245266, guid: e47bd2c04daf2c9409eba6393f5bab71, type: 3}
+  - {fileID: 8540157954868956576, guid: 0b9dc9ca78fe5a34995f83eec8f5a34c, type: 3}
+  goldPotPosition: {x: -2, y: 0, z: 0}
+  currentValue: 10
+  thresholds: 020000000400000006000000080000000a0000000c0000000e0000001000000012000000
 --- !u!1 &441125867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,6 +2856,11 @@ MonoBehaviour:
   cheese: {fileID: 11400000, guid: c31b37dedb93ecb42a6adfcc68d7d1d5, type: 2}
   cake: {fileID: 11400000, guid: 5d4c1d97c5747384da932d455859a849, type: 2}
   coins: {fileID: 11400000, guid: 96f519eada17d5b48b7cea4a431b247e, type: 2}
+  milkSellValue: 1
+  butterSellValue: 2
+  cheeseSellValue: 3
+  cakeSellValue: 5
+  bulkSlider: {fileID: 1290871178}
 --- !u!1 &824925515
 GameObject:
   m_ObjectHideFlags: 0
@@ -3578,6 +3609,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   product: {fileID: 11400000, guid: 15bd9896ae3e23941acf0e2ac997a352, type: 2}
   productText: {fileID: 1112442390}
+  laskhfsaldfuh:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!222 &1112442392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3731,6 +3765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   product: {fileID: 11400000, guid: cb588f03f175c5c4ea49139e0fac6bd3, type: 2}
   productText: {fileID: 1138906804}
+  laskhfsaldfuh:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!222 &1138906806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3960,10 +3997,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 441125868}
   m_HandleRect: {fileID: 249260053}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 10
+  m_MinValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5020,6 +5057,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   product: {fileID: 11400000, guid: 96f519eada17d5b48b7cea4a431b247e, type: 2}
   productText: {fileID: 1638648968}
+  laskhfsaldfuh:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 397163620}
+        m_TargetAssemblyTypeName: GoldDisplay, Assembly-CSharp
+        m_MethodName: TryUpdateGoldDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1638648970
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5173,6 +5225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   product: {fileID: 11400000, guid: c31b37dedb93ecb42a6adfcc68d7d1d5, type: 2}
   productText: {fileID: 1671146015}
+  laskhfsaldfuh:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!222 &1671146017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6349,6 +6404,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   product: {fileID: 11400000, guid: 5d4c1d97c5747384da932d455859a849, type: 2}
   productText: {fileID: 2059404348}
+  laskhfsaldfuh:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!222 &2059404350
 CanvasRenderer:
   m_ObjectHideFlags: 0
