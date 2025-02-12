@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityFundamentals;
 
@@ -10,11 +11,15 @@ public class LevelUp : MonoBehaviour
     public GameObject []houses;
     private GameObject currentHouse;
     public Vector3 housePosition;
-    
+    public TextMeshProUGUI housePriceText;
     
     void Start()
     {
         SwitchModel();
+    }
+    private void Update()
+    {
+        housePriceText.text = "Price: " + costLevelUp[currentLevel];
     }
 
     public void GoLevelUp()

@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using UnityFundamentals;
 using System;
+using UnityEngine.UI;
+using TMPro;
 
 public class ResourceGeneration : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class ResourceGeneration : MonoBehaviour
     private double exponentIncrease = 1.4;
     public double[] prices = { 1, 50, 100, 1000 };
     public IntVariable coinAmount;
+    public TextMeshProUGUI[] priceTexts;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +26,10 @@ public class ResourceGeneration : MonoBehaviour
     void Update()
     {
         //maybe update display
+        for (int i = 0; i < prices.Length; i++)
+        {
+            priceTexts[i].text = "Price: " + prices[i];
+        }
     }
 
     public void InitiatePasiveIncome(int productIndex)

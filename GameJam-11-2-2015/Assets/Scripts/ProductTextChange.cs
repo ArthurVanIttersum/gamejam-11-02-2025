@@ -8,6 +8,6 @@ public class ProductTextChange : MonoBehaviour
     public TextMeshProUGUI productText;
     public void Update()
     {
-        productText.text = "Coins: " + product.GetValue();
+        productText.text = product.name + ": " + product.GetValue();
     }
 }
