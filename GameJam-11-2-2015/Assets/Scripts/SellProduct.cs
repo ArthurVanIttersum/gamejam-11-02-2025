@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,7 @@ public class SellProduct : MonoBehaviour
     public int cheeseSellValue;
     public int cakeSellValue;
     public Slider bulkSlider;
+    public TextMeshProUGUI amountToSellText;
     public void sellMilk()
     {
         if (milk != null)
@@ -137,5 +139,32 @@ public class SellProduct : MonoBehaviour
                 cake.ChangeValueTo(0);
             }
         }
+    }
+
+    public void UpdateBulkValueDisplay()
+    {
+        string textToDisplay = null;
+        if (bulkSlider.value == 1)
+        {
+            textToDisplay = "1";
+        }
+        if (bulkSlider.value == 2)
+        {
+            textToDisplay = "5";
+        }
+        if (bulkSlider.value == 3)
+        {
+            textToDisplay = "10";
+        }
+        if (bulkSlider.value == 4)
+        {
+            textToDisplay = "100";
+        }
+        if (bulkSlider.value == 5)
+        {
+            textToDisplay = "1000+";
+        }
+
+        amountToSellText.text = textToDisplay;
     }
 }
