@@ -3889,6 +3889,11 @@ MonoBehaviour:
   - {fileID: 995792130}
   - {fileID: 500456455}
   - {fileID: 1760315916}
+  cow: {fileID: 4323145074713269492, guid: 566baa638dd73ad4b9638cabbf1852db, type: 3}
+  cowRandomPositionX1: -984
+  cowRandomPositionX2: -1010
+  cowRandomPositionZ1: 11
+  cowRandomPositionZ2: -17
 --- !u!4 &585467945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1221405607627916283, guid: 47949b0c72de2ff4587dc1e31747af7b, type: 3}
