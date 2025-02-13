@@ -52,18 +52,6 @@ public class ResourceGeneration : MonoBehaviour
     {
         if (prices[productIndex] <= coinAmount.GetValue())
         {
-            PassiveIncomeUpgrades[productIndex]++;
-            coinAmount.ChangeValueBy((int)-prices[productIndex]);
-            if (prices[productIndex] == 1)
-            {
-                prices[productIndex] = 2;
-            }
-            else
-            {
-                prices[productIndex] = Math.Pow(prices[productIndex], exponentIncrease);
-                prices[productIndex] = Math.Round(prices[productIndex], 0);
-            }
-
             if (prices[productIndex] >= 1000)
             {
                 exponentIncrease = 1.025f;
@@ -76,6 +64,23 @@ public class ResourceGeneration : MonoBehaviour
             {
                 exponentIncrease = 1.1f;
             }
+            else
+            {
+                exponentIncrease = 1.4f;
+            }
+
+            PassiveIncomeUpgrades[productIndex]++;
+            coinAmount.ChangeValueBy((int)-prices[productIndex]);
+            if (prices[productIndex] == 1)
+            {
+                prices[productIndex] = 2;
+            }
+            else
+            {
+                prices[productIndex] = Math.Pow(prices[productIndex], exponentIncrease);
+                prices[productIndex] = Math.Round(prices[productIndex], 0);
+            }
+
 
         }
     }
