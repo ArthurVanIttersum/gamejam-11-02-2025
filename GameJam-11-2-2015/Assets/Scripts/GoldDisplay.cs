@@ -47,6 +47,40 @@ public class GoldDisplay : MonoBehaviour
         {
             newValue = 7;
         }
+        if (money.GetValue() >= thresholds[7])
+        {
+            newValue = 8;
+        }
+        if (money.GetValue() >= thresholds[8])
+        {
+            newValue = 9;
+        }
+        if (money.GetValue() >= thresholds[9])
+        {
+            newValue = 10;
+        }
+        if (money.GetValue() >= thresholds[10])
+        {
+            newValue = 11;
+        }
+        if (money.GetValue() >= thresholds[11])
+        {
+            newValue = 12;
+        }
+        if (money.GetValue() >= thresholds[12])
+        {
+            newValue = 13;
+        }
+        if (money.GetValue() >= thresholds[13])
+        {
+            newValue = 14;
+        }
+        if (money.GetValue() >= thresholds[14])
+        {
+            newValue = 15;
+        }
+        
+
         if (currentValue != newValue)
         {
             SwitchModel(newValue);
