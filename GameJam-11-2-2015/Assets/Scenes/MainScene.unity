@@ -1557,7 +1557,7 @@ MonoBehaviour:
   - 1
   - 100
   - 1000
-  - 100000
+  - 10000
   coinAmount: {fileID: 11400000, guid: 96f519eada17d5b48b7cea4a431b247e, type: 2}
   priceTexts:
   - {fileID: 967556577}
