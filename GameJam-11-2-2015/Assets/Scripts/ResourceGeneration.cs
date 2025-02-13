@@ -15,6 +15,11 @@ public class ResourceGeneration : MonoBehaviour
     public double[] prices = { 1, 50, 100, 1000 };
     public IntVariable coinAmount;
     public TextMeshProUGUI[] priceTexts;
+    public GameObject cow;
+    public float cowRandomPositionX1;
+    public float cowRandomPositionX2; 
+    public float cowRandomPositionZ1;
+    public float cowRandomPositionZ2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -83,6 +88,11 @@ public class ResourceGeneration : MonoBehaviour
 
 
         }
+    }
+
+    public void spawnCow()
+    {
+        Instantiate(cow, new Vector3(UnityEngine.Random.Range(cowRandomPositionX1,cowRandomPositionX2), -0.5f, UnityEngine.Random.Range(cowRandomPositionZ1,cowRandomPositionZ2)), cow.transform.rotation);
     }
 
 }
